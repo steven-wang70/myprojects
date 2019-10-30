@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!--
+To compile this metadata into Swift proxy classes, use these commands from SAPTools
+./xs-proxy.sh album_metadata.xml album_metadata.xml.xs -pretty -service generic:AlbumService
+./xsc.sh album_metadata.xml.xs -swift -ds.generic -swift:import SAPOData -d .
+After compile, you could rename the generated .swift file to any name like AlbumService.swift
+-->
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+    <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="SAPSQLOData" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+      <EntityType Name="Photos" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="pk"/>
+        </Key>
+        <Property Name="pk" Nullable="false" Type="Edm.Int32"/>
+        <Property Collation="UTF8BIN" MaxLength="20" Name="title" Nullable="false" Type="Edm.String"/>
+      </EntityType>
+      <EntityContainer Name="SAPSQLOData_Container" m:IsDefaultEntityContainer="true">
+        <EntitySet EntityType="SAPSQLOData.Photos" Name="Photos"/>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

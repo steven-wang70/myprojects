@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="DemoStream.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DemoStream"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock x:Name="Status" HorizontalAlignment="Center" Margin="0,466,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="106" Width="335" FontSize="12" RenderTransformOrigin="-0.753,-3.148"/>
+        <Button x:Name="Open" Content="Open" HorizontalAlignment="Left" Margin="13,591,0,0" VerticalAlignment="Top" Height="39" Width="91" Click="Open_Click" RenderTransformOrigin="0.024,-3.294"/>
+        <Button x:Name="Close" Content="Close" HorizontalAlignment="Left" Margin="134,591,0,0" VerticalAlignment="Top" Height="39" Width="81" Click="Close_Click"/>
+        <Button x:Name="Create" Content="Create" HorizontalAlignment="Left" Margin="245,591,0,0" VerticalAlignment="Top" Height="39" Width="96" Click="Create_Click"/>
+        <Button x:Name="Update" Content="Update" HorizontalAlignment="Left" Margin="355,591,0,0" VerticalAlignment="Top" Height="39" Width="96" Click="Update_Click"/>
+        <Button x:Name="Delete" Content="Delete" HorizontalAlignment="Left" Margin="465,591,0,0" VerticalAlignment="Top" Height="39" Width="96" Click="Delete_ClickAsync"/>
+        <TextBlock x:Name="Result" HorizontalAlignment="Center" Margin="0,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="429" Width="329"/>
+        <Image x:Name="ImageBox" HorizontalAlignment="Left" Height="414" Margin="1034,20,0,0" VerticalAlignment="Top" Width="367"/>
+
+    </Grid>
+</Page>
