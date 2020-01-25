@@ -7,16 +7,5 @@
   <Set name="war"><Property name="jetty.webapps" default="."/>/jsoncsv.war</Set>
   <Set name="extractWAR">true</Set>
 
-  <Set name="securityHandler">
-    <New class="org.eclipse.jetty.security.ConstraintSecurityHandler">
-     <Set name="loginService">
-       <New class="org.eclipse.jetty.jaas.JAASLoginService">
-         <Set name="name">JSON CSV Conversion</Set>
-         <Set name="loginModuleName">xyz</Set>
-       </New>
-     </Set>
-    </New>
-  </Set>
-
 </Configure>
 

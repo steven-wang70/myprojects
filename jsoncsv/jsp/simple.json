@@ -1,0 +1,19 @@
+[
+  {
+    "prop1": 1,
+    "prop2": true,
+    "prop3": null,
+    "prop4": "Hello world",
+    "prop5": 1.23e10
+  },
+  {
+    "prop1": 1234567890.111213141516171819212345,
+    "prop2": false,
+    "prop3": null,
+    "prop4": "Hello\n\"\\ world",
+    "prop5": 1.23e123
+  },
+  {
+    "prop4": "Hello\n\"\\ "
+  }
+]

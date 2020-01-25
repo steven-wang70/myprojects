@@ -1,0 +1,5 @@
+header1,header2,header3
+1,TRUE,Hello World
+2.2345678901234567890123456789,FALSE,
+,345,\N
+" hel,lo \\\n\"",
