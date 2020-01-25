@@ -1,0 +1,4 @@
+"prop1","prop2","prop3","prop4","prop5"
+1,true,\N,"Hello world",1.23e10
+1234567890.111213141516171819212345,false,\N,"Hello\n\"\\ world",1.23e123
+\N,\N,\N,"Hello\n\"\\ ",\N

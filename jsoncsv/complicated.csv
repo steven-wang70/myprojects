@@ -1,0 +1,51 @@
+>>>>>>>>>> SUCCESS
+header1,header2,header3
+1,True,Hello World
+2.2345678901234567890123456789,FALSE,
+,345,\N
+" hel,lo \\\n\"",
+true,True,false
+
+>>>>>>>>>> SUCCESS with logging
+<<<<<<<<<< INFO
+header1,header2,header3
+1,TRUE,Hello World
+2.2345678901234567890123456789,FALSE,
+
+>>>>>>>>>> SUCCESS Empty lines will be skipped
+<<<<<<<<<< ERROR
+
+header1,header2,header3
+1,TRUE,Hello World
+		
+2.2345678901234567890123456789,FALSE,
+
+>>>>>>>>>> FAIL with duplicated header names
+<<<<<<<<<< ERROR
+header1,header2,header2
+1,TRUE,Hello World
+2.2345678901234567890123456789,FALSE,
+
+>>>>>>>>>> SUCCESS even header name is boolean or number
+header1,true,123.4
+1,TRUE,Hello World
+2.2345678901234567890123456789,FALSE,
+
+>>>>>>>>>> FAIL with extra item
+<<<<<<<<<< ERROR
+header1,header2,header3
+1,TRUE,Hello World
+2.2345678901234567890123456789,FALSE,hello,"Extra item"
+
+>>>>>>>>>> SUCCESS with single record
+<<<<<<<<<< ERROR
+header1,header2,header3
+
+>>>>>>>>>> SUCCESS with empty content
+<<<<<<<<<< ERROR
+
+>>>>>>>>>> SUCCESS with leading or pending spaces
+ header1 , header2, header3
+1, TRUE , Hello World 
+ 2.2345678901234567890123456789	,	FALSE, 
+>>>>>>>>>> END

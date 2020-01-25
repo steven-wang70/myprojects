@@ -1,0 +1,17 @@
+[
+	{
+		"header1" : 1,
+		"header2" : true,
+		"header3" : "Hello World"
+	},
+	{
+		"header1" : 2.2345678901234567890123456789,
+		"header2" : false
+	},
+	{
+		"header2" : 345
+	},
+	{
+		"header1" : "hel,lo \\\n\""
+	}
+]

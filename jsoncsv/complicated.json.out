@@ -1,0 +1,158 @@
+>>>>>>>>>> SUCCESS
+"prop1","prop2","prop3","prop4","prop5"
+1,true,\N,"Hello world",1.23e10
+1234567890.111213141516171819212345,false,\N,"Hello\n\"\\ world",1.23e123
+\N,\N,\N,\N,\N
+\N,\N,\N,"Hello\n\"\\ ",\N
+
+<<<<<<<<<< Exit code: 0
+>>>>>>>>>> SUCCESS with logging
+<<<<<<<<<< INFO
+INFO:Start parsing JSON stream.
+INFO:Start parsing JSON array.
+INFO:Start parsing a JSON object.
+INFO:Start encoding CSV header.
+"prop1","prop2","prop3","prop4","prop5"
+INFO:End encoding CSV header.
+INFO:Start encoding a CSV record.
+1,true,\N,"Hello world",1.23e10
+INFO:End encoding a CSV record.
+INFO:End parsing a JSON object.
+INFO:Start parsing a JSON object.
+INFO:Start encoding a CSV record.
+1234567890.111213141516171819212345,false,\N,"Hello\n\"\\ world",1.23e123
+INFO:End encoding a CSV record.
+INFO:End parsing a JSON object.
+INFO:Start parsing a JSON object.
+INFO:Start encoding a CSV record.
+\N,\N,\N,"Hello\n\"\\ ",\N
+INFO:End encoding a CSV record.
+INFO:End parsing a JSON object.
+INFO:End parsing JSON array.
+INFO:End parsing JSON strream.
+
+<<<<<<<<<< Exit code: 0
+>>>>>>>>>> SUCCESS with single object
+"prop1","prop2","prop3","prop4","prop5"
+1,true,\N,"Hello world",1.23e10
+
+<<<<<<<<<< Exit code: 0
+>>>>>>>>>> FAIL with nested object
+<<<<<<<<<< ERROR
+ERROR:The JSON object cannot contain nested array or object.
+jsoncsv.ConverterException: The JSON object cannot contain nested array or object.
+	at jsoncsv.JsonDecoder.processSingleObject(JsonDecoder.java:133)
+	at jsoncsv.JsonDecoder.process(JsonDecoder.java:50)
+	at jsoncsv.JsonCSV.Json2CSV(JsonCSV.java:94)
+	at test.TestCases.convert(TestCases.java:82)
+	at test.TestCases.main(TestCases.java:51)
+
+The JSON object cannot contain nested array or object.
+
+<<<<<<<<<< Exit code: 1011
+>>>>>>>>>> FAIL with nested array
+<<<<<<<<<< ERROR
+ERROR:The JSON object cannot contain nested array or object.
+jsoncsv.ConverterException: The JSON object cannot contain nested array or object.
+	at jsoncsv.JsonDecoder.processSingleObject(JsonDecoder.java:130)
+	at jsoncsv.JsonDecoder.process(JsonDecoder.java:50)
+	at jsoncsv.JsonCSV.Json2CSV(JsonCSV.java:94)
+	at test.TestCases.convert(TestCases.java:82)
+	at test.TestCases.main(TestCases.java:51)
+
+The JSON object cannot contain nested array or object.
+
+<<<<<<<<<< Exit code: 1011
+>>>>>>>>>> FAIL with nested array
+<<<<<<<<<< ERROR
+"prop1","prop2","prop3","prop4","prop5"
+1,true,\N,"Hello world",1.23e10
+ERROR:The top level array of source JSON can not contains elements other than objects.
+jsoncsv.ConverterException: The top level array of source JSON can not contains elements other than objects.
+	at jsoncsv.JsonDecoder.processObjectArray(JsonDecoder.java:90)
+	at jsoncsv.JsonDecoder.process(JsonDecoder.java:53)
+	at jsoncsv.JsonCSV.Json2CSV(JsonCSV.java:94)
+	at test.TestCases.convert(TestCases.java:82)
+	at test.TestCases.main(TestCases.java:51)
+
+The top level array of source JSON can not contains elements other than objects.
+
+<<<<<<<<<< Exit code: 1010
+>>>>>>>>>> FAIL with primitive value in the array
+<<<<<<<<<< ERROR
+"prop1","prop2","prop3","prop4","prop5"
+1,true,\N,"Hello world",1.23e10
+ERROR:The top level array of source JSON can not contains elements other than objects.
+jsoncsv.ConverterException: The top level array of source JSON can not contains elements other than objects.
+	at jsoncsv.JsonDecoder.processObjectArray(JsonDecoder.java:90)
+	at jsoncsv.JsonDecoder.process(JsonDecoder.java:53)
+	at jsoncsv.JsonCSV.Json2CSV(JsonCSV.java:94)
+	at test.TestCases.convert(TestCases.java:82)
+	at test.TestCases.main(TestCases.java:51)
+
+The top level array of source JSON can not contains elements other than objects.
+
+<<<<<<<<<< Exit code: 1010
+>>>>>>>>>> FAIL with extra property in following objects
+<<<<<<<<<< ERROR
+"prop1","prop2","prop3","prop4","prop5"
+1,true,\N,"Hello world",1.23e10
+ERROR:Could not convert extra JSON object property prop6 to CSV. Make sure the first JSON object contains every required property.
+jsoncsv.ConverterException: Could not convert extra JSON object property prop6 to CSV. Make sure the first JSON object contains every required property.
+	at jsoncsv.CSVEncoder.encode(CSVEncoder.java:105)
+	at jsoncsv.JsonDecoder.processSingleObject(JsonDecoder.java:125)
+	at jsoncsv.JsonDecoder.processObjectArray(JsonDecoder.java:87)
+	at jsoncsv.JsonDecoder.process(JsonDecoder.java:53)
+	at jsoncsv.JsonCSV.Json2CSV(JsonCSV.java:94)
+	at test.TestCases.convert(TestCases.java:82)
+	at test.TestCases.main(TestCases.java:51)
+
+Could not convert extra JSON object property prop6 to CSV. Make sure the first JSON object contains every required property.
+
+<<<<<<<<<< Exit code: 1007
+>>>>>>>>>> FAIL with empty object as first element in array
+<<<<<<<<<< ERROR
+ERROR:Cannot convert JSON stream into CSV while the first JSON object is empty.
+jsoncsv.ConverterException: Cannot convert JSON stream into CSV while the first JSON object is empty.
+	at jsoncsv.CSVEncoder.encodeHeader(CSVEncoder.java:58)
+	at jsoncsv.JsonDecoder.processSingleObject(JsonDecoder.java:122)
+	at jsoncsv.JsonDecoder.processObjectArray(JsonDecoder.java:87)
+	at jsoncsv.JsonDecoder.process(JsonDecoder.java:53)
+	at jsoncsv.JsonCSV.Json2CSV(JsonCSV.java:94)
+	at test.TestCases.convert(TestCases.java:82)
+	at test.TestCases.main(TestCases.java:51)
+
+Cannot convert JSON stream into CSV while the first JSON object is empty.
+
+<<<<<<<<<< Exit code: 1005
+>>>>>>>>>> FAIL with empty object
+<<<<<<<<<< ERROR
+ERROR:Cannot convert JSON stream into CSV while the first JSON object is empty.
+jsoncsv.ConverterException: Cannot convert JSON stream into CSV while the first JSON object is empty.
+	at jsoncsv.CSVEncoder.encodeHeader(CSVEncoder.java:58)
+	at jsoncsv.JsonDecoder.processSingleObject(JsonDecoder.java:122)
+	at jsoncsv.JsonDecoder.process(JsonDecoder.java:50)
+	at jsoncsv.JsonCSV.Json2CSV(JsonCSV.java:94)
+	at test.TestCases.convert(TestCases.java:82)
+	at test.TestCases.main(TestCases.java:51)
+
+Cannot convert JSON stream into CSV while the first JSON object is empty.
+
+<<<<<<<<<< Exit code: 1005
+>>>>>>>>>> SUCCESS with empty array
+<<<<<<<<<< ERROR
+
+<<<<<<<<<< Exit code: 0
+>>>>>>>>>> FAIL with empty content
+<<<<<<<<<< ERROR
+ERROR:Cannot read source JSON file.
+jsoncsv.ConverterException: Cannot read source JSON file.
+	at jsoncsv.JsonDecoder.process(JsonDecoder.java:46)
+	at jsoncsv.JsonCSV.Json2CSV(JsonCSV.java:94)
+	at test.TestCases.convert(TestCases.java:82)
+	at test.TestCases.main(TestCases.java:51)
+
+Cannot read source JSON file.
+
+<<<<<<<<<< Exit code: 1008
+>>>>>>>>>> END

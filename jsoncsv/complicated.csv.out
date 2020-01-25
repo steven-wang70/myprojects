@@ -1,0 +1,135 @@
+>>>>>>>>>> SUCCESS
+[
+	{
+		"header1" : 1,
+		"header2" : true,
+		"header3" : "Hello World"
+	},
+	{
+		"header1" : 2.2345678901234567890123456789,
+		"header2" : false
+	},
+	{
+		"header2" : 345
+	},
+	{
+		"header1" : "hel,lo \\\n\""
+	},
+	{
+		"header1" : true,
+		"header2" : true,
+		"header3" : false
+	}
+]
+<<<<<<<<<< Exit code: 0
+>>>>>>>>>> SUCCESS with logging
+<<<<<<<<<< INFO
+INFO:Start parsing CSV stream.
+INFO:Start parsing CSV header.
+INFO:End parsing CSV header.
+INFO:Start encoding JSON array begin.
+INFO:End encoding JSON array begin.
+INFO:Start parsing a CSV record.
+INFO:Start encoding a JSON object.
+[
+	{
+		"header1" : 1,
+		"header2" : true,
+		"header3" : "Hello World"
+	}INFO:End encoding a JSON object.
+INFO:End parsing a CSV record.
+INFO:Start parsing a CSV record.
+INFO:Start encoding a JSON object.
+,
+	{
+		"header1" : 2.2345678901234567890123456789,
+		"header2" : false
+	}INFO:End encoding a JSON object.
+INFO:End parsing a CSV record.
+INFO:Start encoding JSON array end.
+
+]INFO:End encodig JSON array end.
+INFO:End parsing CSV stream.
+
+<<<<<<<<<< Exit code: 0
+>>>>>>>>>> SUCCESS Empty lines will be skipped
+<<<<<<<<<< ERROR
+[
+	{
+		"header1" : 1,
+		"header2" : true,
+		"header3" : "Hello World"
+	},
+	{
+		"header1" : 2.2345678901234567890123456789,
+		"header2" : false
+	}
+]
+<<<<<<<<<< Exit code: 0
+>>>>>>>>>> FAIL with duplicated header names
+<<<<<<<<<< ERROR
+ERROR:Duplicate CSV header name header2.
+jsoncsv.ConverterException: Duplicate CSV header name header2.
+	at jsoncsv.CSVDecoder.processHeaderNames(CSVDecoder.java:94)
+	at jsoncsv.CSVDecoder.process(CSVDecoder.java:53)
+	at jsoncsv.JsonCSV.CSV2Json(JsonCSV.java:108)
+	at test.TestCases.convert(TestCases.java:84)
+	at test.TestCases.main(TestCases.java:51)
+
+Duplicate CSV header name header2.
+
+<<<<<<<<<< Exit code: 1003
+>>>>>>>>>> SUCCESS even header name is boolean or number
+[
+	{
+		"header1" : 1,
+		"true" : true,
+		"123.4" : "Hello World"
+	},
+	{
+		"header1" : 2.2345678901234567890123456789,
+		"true" : false
+	}
+]
+<<<<<<<<<< Exit code: 0
+>>>>>>>>>> FAIL with extra item
+<<<<<<<<<< ERROR
+[
+	{
+		"header1" : 1,
+		"header2" : true,
+		"header3" : "Hello World"
+	}ERROR:The CSV record at line 3 has extra items.
+jsoncsv.ConverterException: The CSV record at line 3 has extra items.
+	at jsoncsv.CSVDecoder.processRecord(CSVDecoder.java:113)
+	at jsoncsv.CSVDecoder.process(CSVDecoder.java:58)
+	at jsoncsv.JsonCSV.CSV2Json(JsonCSV.java:108)
+	at test.TestCases.convert(TestCases.java:84)
+	at test.TestCases.main(TestCases.java:51)
+
+The CSV record at line 3 has extra items.
+
+<<<<<<<<<< Exit code: 1004
+>>>>>>>>>> SUCCESS with single record
+<<<<<<<<<< ERROR
+[
+]
+<<<<<<<<<< Exit code: 0
+>>>>>>>>>> SUCCESS with empty content
+<<<<<<<<<< ERROR
+
+<<<<<<<<<< Exit code: 0
+>>>>>>>>>> SUCCESS with leading or pending spaces
+[
+	{
+		"header1" : 1,
+		"header2" : true,
+		"header3" : "Hello World"
+	},
+	{
+		"header1" : 2.2345678901234567890123456789,
+		"header2" : false
+	}
+]
+<<<<<<<<<< Exit code: 0
+>>>>>>>>>> END

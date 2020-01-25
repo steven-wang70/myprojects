@@ -1,0 +1,153 @@
+>>>>>>>>>> SUCCESS
+[
+  {
+    "prop1": 1,
+    "prop2": true,
+    "prop3": null,
+    "prop4": "Hello world",
+    "prop5": 1.23e10
+  },
+  {
+    "prop1": 1234567890.111213141516171819212345,
+    "prop2": false,
+    "prop3": null,
+    "prop4": "Hello\n\"\\ world",
+    "prop5": 1.23e123
+  },
+  {
+  },
+  {
+    "prop4": "Hello\n\"\\ "
+  }
+]
+
+>>>>>>>>>> SUCCESS with logging
+<<<<<<<<<< INFO
+[
+  {
+    "prop1": 1,
+    "prop2": true,
+    "prop3": null,
+    "prop4": "Hello world",
+    "prop5": 1.23e10
+  },
+  {
+    "prop1": 1234567890.111213141516171819212345,
+    "prop2": false,
+    "prop3": null,
+    "prop4": "Hello\n\"\\ world",
+    "prop5": 1.23e123
+  },
+  {
+    "prop4": "Hello\n\"\\ "
+  }
+]
+
+>>>>>>>>>> SUCCESS with single object
+{
+"prop1": 1,
+"prop2": true,
+"prop3": null,
+"prop4": "Hello world",
+"prop5": 1.23e10
+}
+
+>>>>>>>>>> FAIL with nested object
+<<<<<<<<<< ERROR
+{
+"prop1": 1,
+"prop2": {"prop1": 123},
+"prop3": null,
+"prop4": "Hello world",
+"prop5": 1.23e10
+}
+
+>>>>>>>>>> FAIL with nested array
+<<<<<<<<<< ERROR
+{
+"prop1": 1,
+"prop2": [123, 456],
+"prop3": null,
+"prop4": "Hello world",
+"prop5": 1.23e10
+}
+
+>>>>>>>>>> FAIL with nested array
+<<<<<<<<<< ERROR
+[
+  {
+    "prop1": 1,
+    "prop2": true,
+    "prop3": null,
+    "prop4": "Hello world",
+    "prop5": 1.23e10
+  },
+  [123, 456],
+  {
+    "prop4": "Hello\n\"\\ "
+  }
+]
+
+>>>>>>>>>> FAIL with primitive value in the array
+<<<<<<<<<< ERROR
+[
+  {
+    "prop1": 1,
+    "prop2": true,
+    "prop3": null,
+    "prop4": "Hello world",
+    "prop5": 1.23e10
+  },
+  123,
+  {
+    "prop4": "Hello\n\"\\ "
+  }
+]
+
+>>>>>>>>>> FAIL with extra property in following objects
+<<<<<<<<<< ERROR
+[
+  {
+    "prop1": 1,
+    "prop2": true,
+    "prop3": null,
+    "prop4": "Hello world",
+    "prop5": 1.23e10
+  },
+  {
+    "prop6": 1234567890.111213141516171819212345,
+    "prop2": false,
+    "prop3": null,
+    "prop4": "Hello\n\"\\ world",
+    "prop5": 1.23e123
+  }
+]
+
+>>>>>>>>>> FAIL with empty object as first element in array
+<<<<<<<<<< ERROR
+[
+  {
+  },
+  {
+    "prop6": 1234567890.111213141516171819212345,
+    "prop2": false,
+    "prop3": null,
+    "prop4": "Hello\n\"\\ world",
+    "prop5": 1.23e123
+  }
+]
+
+>>>>>>>>>> FAIL with empty object
+<<<<<<<<<< ERROR
+  {
+  }
+
+>>>>>>>>>> SUCCESS with empty array
+<<<<<<<<<< ERROR
+[
+]
+
+>>>>>>>>>> FAIL with empty content
+<<<<<<<<<< ERROR
+
+>>>>>>>>>> END
